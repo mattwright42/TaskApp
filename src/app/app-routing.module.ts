@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'tools', component: ToolsComponent },
-  { path: '', component: AppComponent },
+  { path: '', component: HomeComponent },
   { path: 'tasks', loadChildren: () => import('./tasks/tasks.module').then(m => m.TasksModule) },
   { path: 'news', loadChildren: () => import('./news/news.module').then(m => m.NewsModule) },
   { path: 'tools', loadChildren: () => import('./tools/tools.module').then(m => m.ToolsModule) },
