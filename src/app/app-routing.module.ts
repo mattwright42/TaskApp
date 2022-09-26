@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'tasks', component: TasksComponent },
+  { path: 'tasks', loadChildren: () => import('./tasks/tasks.component').then(m => m.TasksComponent) },
   { path: 'news', component: NewsComponent },
   { path: 'tools', component: ToolsComponent },
   { path: '', component: AppComponent },
@@ -20,3 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
